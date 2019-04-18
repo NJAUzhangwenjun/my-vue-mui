@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import Search from '@/components/Search'
+import Member from '@/components/Member'
+import ShopCar from '@/components/ShopCar'
+import Home from '@/components/Home'
 import App from '@/App'
 
 Vue.use(Router);
@@ -8,7 +11,22 @@ Vue.use(Router);
 export default new Router({
     routes: [{
         path: '/',
-        name: 'App',
-        component: App
-    }]
+        redirect:'/home'
+    },{
+        path: '/home',
+        name: 'Home',
+        component: Home
+    },{
+        path: '/search',
+        name: 'Search',
+        component: Search
+    },{
+        path: '/member',
+        name: 'Member',
+        component: Member
+    },{
+        path: '/shopCar',
+        name: 'ShopCar',
+        component: ShopCar
+    },]
 })
